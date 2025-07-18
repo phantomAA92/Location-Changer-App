@@ -1,0 +1,32 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+                <gpx version="1.0" creator="maemo-mapper" xmlns="http://www.topografix.com/GPX/1/0">
+          <trk>
+            <trkseg>
+                      <trkpt lat="32.82957326789177" lon="-117.1456035085954">
+                                    <ele>10</ele>
+                                    <time>2025-02-28T11:29:39Z</time>
+                                </trkpt>
+                      <trkpt lat="32.829618406781" lon="-117.1456035086">
+                                    <ele>5</ele>
+                                    <time>2025-02-28T11:29:44Z</time>
+                                </trkpt>
+                      <trkpt lat="32.829663092001" lon="-117.14555882338">
+                                    <ele>7</ele>
+                                    <time>2025-02-28T11:29:46Z</time>
+                                </trkpt>
+                      <trkpt lat="32.829663092001" lon="-117.1454685456">
+                                    <ele>10</ele>
+                                    <time>2025-02-28T11:29:49Z</time>
+                                </trkpt>
+                      <trkpt lat="32.829612023178" lon="-117.14541747677">
+                                    <ele>8</ele>
+                                    <time>2025-02-28T11:29:55Z</time>
+                                </trkpt>
+                      <trkpt lat="32.829586488766" lon="-117.14544301119">
+                                    <ele>4</ele>
+                                    <time>2025-02-28T11:29:59Z</time>
+                                </trkpt>
+            </trkseg>
+          </trk>
+                </gpx>

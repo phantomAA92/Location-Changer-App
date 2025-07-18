@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CD4D5052CD737DB0090649B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4D5042CD737DB0090649B /* AppDelegate.swift */; };
+		4CD4D5072CD737DB0090649B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4D5062CD737DB0090649B /* SceneDelegate.swift */; };
+		4CD4D5092CD737DB0090649B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4D5082CD737DB0090649B /* ViewController.swift */; };
+		4CD4D50C2CD737DC0090649B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4D50B2CD737DC0090649B /* Base */; };
+		4CD4D50E2CD737E20090649B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4D50D2CD737E20090649B /* Assets.xcassets */; };
+		4CD4D5112CD737E20090649B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4D5102CD737E20090649B /* Base */; };
+		4CD4D51C2CD737E30090649B /* GPS_SpoofTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4D51B2CD737E30090649B /* GPS_SpoofTests.swift */; };
+		4CD4D5262CD737E30090649B /* GPS_SpoofUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4D5252CD737E30090649B /* GPS_SpoofUITests.swift */; };
+		4CD4D5282CD737E30090649B /* GPS_SpoofUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4D5272CD737E30090649B /* GPS_SpoofUITestsLaunchTests.swift */; };
+		528BBF002E2A89E700951522 /* GPXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BBEFF2E2A89E100951522 /* GPXParser.swift */; };
+		528BBF042E2AB88600951522 /* FakeLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BBF032E2AB88600951522 /* FakeLocationManager.swift */; };
+		529E68D42DDA375000A100C1 /* TrackLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 529E68D32DDA375000A100C1 /* TrackLocation.gpx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CD4D5182CD737E30090649B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CD4D4F92CD737DA0090649B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CD4D5002CD737DB0090649B;
+			remoteInfo = "GPS-Spoof";
+		};
+		4CD4D5222CD737E30090649B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CD4D4F92CD737DA0090649B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CD4D5002CD737DB0090649B;
+			remoteInfo = "GPS-Spoof";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4CD4D5012CD737DB0090649B /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD4D5042CD737DB0090649B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CD4D5062CD737DB0090649B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4CD4D5082CD737DB0090649B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4CD4D50B2CD737DC0090649B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CD4D50D2CD737E20090649B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CD4D5102CD737E20090649B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CD4D5122CD737E20090649B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CD4D5172CD737E30090649B /* GPS-SpoofTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GPS-SpoofTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD4D51B2CD737E30090649B /* GPS_SpoofTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPS_SpoofTests.swift; sourceTree = "<group>"; };
+		4CD4D5212CD737E30090649B /* GPS-SpoofUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GPS-SpoofUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD4D5252CD737E30090649B /* GPS_SpoofUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPS_SpoofUITests.swift; sourceTree = "<group>"; };
+		4CD4D5272CD737E30090649B /* GPS_SpoofUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPS_SpoofUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		528BBEFF2E2A89E100951522 /* GPXParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXParser.swift; sourceTree = "<group>"; };
+		528BBF032E2AB88600951522 /* FakeLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLocationManager.swift; sourceTree = "<group>"; };
+		529E68D32DDA375000A100C1 /* TrackLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TrackLocation.gpx; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CD4D4FE2CD737DB0090649B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD4D5142CD737E30090649B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD4D51E2CD737E30090649B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CD4D4F82CD737DA0090649B = {
+			isa = PBXGroup;
+			children = (
+				4CD4D5032CD737DB0090649B /* GPS-Spoof */,
+				4CD4D51A2CD737E30090649B /* GPS-SpoofTests */,
+				4CD4D5242CD737E30090649B /* GPS-SpoofUITests */,
+				4CD4D5022CD737DB0090649B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CD4D5022CD737DB0090649B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CD4D5012CD737DB0090649B /* FitnessApp.app */,
+				4CD4D5172CD737E30090649B /* GPS-SpoofTests.xctest */,
+				4CD4D5212CD737E30090649B /* GPS-SpoofUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CD4D5032CD737DB0090649B /* GPS-Spoof */ = {
+			isa = PBXGroup;
+			children = (
+				528BBEFF2E2A89E100951522 /* GPXParser.swift */,
+				4CD4D5042CD737DB0090649B /* AppDelegate.swift */,
+				4CD4D5062CD737DB0090649B /* SceneDelegate.swift */,
+				4CD4D5082CD737DB0090649B /* ViewController.swift */,
+				4CD4D50A2CD737DC0090649B /* Main.storyboard */,
+				4CD4D50D2CD737E20090649B /* Assets.xcassets */,
+				4CD4D50F2CD737E20090649B /* LaunchScreen.storyboard */,
+				4CD4D5122CD737E20090649B /* Info.plist */,
+				529E68D32DDA375000A100C1 /* TrackLocation.gpx */,
+				528BBF032E2AB88600951522 /* FakeLocationManager.swift */,
+			);
+			path = "GPS-Spoof";
+			sourceTree = "<group>";
+		};
+		4CD4D51A2CD737E30090649B /* GPS-SpoofTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CD4D51B2CD737E30090649B /* GPS_SpoofTests.swift */,
+			);
+			path = "GPS-SpoofTests";
+			sourceTree = "<group>";
+		};
+		4CD4D5242CD737E30090649B /* GPS-SpoofUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4CD4D5252CD737E30090649B /* GPS_SpoofUITests.swift */,
+				4CD4D5272CD737E30090649B /* GPS_SpoofUITestsLaunchTests.swift */,
+			);
+			path = "GPS-SpoofUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CD4D5002CD737DB0090649B /* FitnessApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CD4D52B2CD737E30090649B /* Build configuration list for PBXNativeTarget "FitnessApp" */;
+			buildPhases = (
+				4CD4D4FD2CD737DB0090649B /* Sources */,
+				4CD4D4FE2CD737DB0090649B /* Frameworks */,
+				4CD4D4FF2CD737DB0090649B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitnessApp;
+			productName = "GPS-Spoof";
+			productReference = 4CD4D5012CD737DB0090649B /* FitnessApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CD4D5162CD737E30090649B /* GPS-SpoofTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CD4D52E2CD737E30090649B /* Build configuration list for PBXNativeTarget "GPS-SpoofTests" */;
+			buildPhases = (
+				4CD4D5132CD737E30090649B /* Sources */,
+				4CD4D5142CD737E30090649B /* Frameworks */,
+				4CD4D5152CD737E30090649B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CD4D5192CD737E30090649B /* PBXTargetDependency */,
+			);
+			name = "GPS-SpoofTests";
+			productName = "GPS-SpoofTests";
+			productReference = 4CD4D5172CD737E30090649B /* GPS-SpoofTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4CD4D5202CD737E30090649B /* GPS-SpoofUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CD4D5312CD737E30090649B /* Build configuration list for PBXNativeTarget "GPS-SpoofUITests" */;
+			buildPhases = (
+				4CD4D51D2CD737E30090649B /* Sources */,
+				4CD4D51E2CD737E30090649B /* Frameworks */,
+				4CD4D51F2CD737E30090649B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CD4D5232CD737E30090649B /* PBXTargetDependency */,
+			);
+			name = "GPS-SpoofUITests";
+			productName = "GPS-SpoofUITests";
+			productReference = 4CD4D5212CD737E30090649B /* GPS-SpoofUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CD4D4F92CD737DA0090649B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					4CD4D5002CD737DB0090649B = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					4CD4D5162CD737E30090649B = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 4CD4D5002CD737DB0090649B;
+					};
+					4CD4D5202CD737E30090649B = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 4CD4D5002CD737DB0090649B;
+					};
+				};
+			};
+			buildConfigurationList = 4CD4D4FC2CD737DA0090649B /* Build configuration list for PBXProject "FitnessApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CD4D4F82CD737DA0090649B;
+			productRefGroup = 4CD4D5022CD737DB0090649B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CD4D5002CD737DB0090649B /* FitnessApp */,
+				4CD4D5162CD737E30090649B /* GPS-SpoofTests */,
+				4CD4D5202CD737E30090649B /* GPS-SpoofUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CD4D4FF2CD737DB0090649B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD4D50E2CD737E20090649B /* Assets.xcassets in Resources */,
+				4CD4D5112CD737E20090649B /* Base in Resources */,
+				529E68D42DDA375000A100C1 /* TrackLocation.gpx in Resources */,
+				4CD4D50C2CD737DC0090649B /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD4D5152CD737E30090649B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD4D51F2CD737E30090649B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CD4D4FD2CD737DB0090649B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD4D5092CD737DB0090649B /* ViewController.swift in Sources */,
+				4CD4D5052CD737DB0090649B /* AppDelegate.swift in Sources */,
+				528BBF042E2AB88600951522 /* FakeLocationManager.swift in Sources */,
+				528BBF002E2A89E700951522 /* GPXParser.swift in Sources */,
+				4CD4D5072CD737DB0090649B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD4D5132CD737E30090649B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD4D51C2CD737E30090649B /* GPS_SpoofTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD4D51D2CD737E30090649B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD4D5262CD737E30090649B /* GPS_SpoofUITests.swift in Sources */,
+				4CD4D5282CD737E30090649B /* GPS_SpoofUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CD4D5192CD737E30090649B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CD4D5002CD737DB0090649B /* FitnessApp */;
+			targetProxy = 4CD4D5182CD737E30090649B /* PBXContainerItemProxy */;
+		};
+		4CD4D5232CD737E30090649B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CD4D5002CD737DB0090649B /* FitnessApp */;
+			targetProxy = 4CD4D5222CD737E30090649B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CD4D50A2CD737DC0090649B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CD4D50B2CD737DC0090649B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CD4D50F2CD737E20090649B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CD4D5102CD737E20090649B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CD4D5292CD737E30090649B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4CD4D52A2CD737E30090649B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CD4D52C2CD737E30090649B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 692P56AUQM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GPS-Spoof/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "requires GPS to track cars and job orders";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "requires GPS to track cars and job orders";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "requires GPS to track cars and job orders";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.repairporter.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CD4D52D2CD737E30090649B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 692P56AUQM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GPS-Spoof/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "requires GPS to track cars and job orders";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "requires GPS to track cars and job orders";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "requires GPS to track cars and job orders";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.repairporter.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4CD4D52F2CD737E30090649B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ross.GPS-SpoofTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GPS-Spoof.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GPS-Spoof";
+			};
+			name = Debug;
+		};
+		4CD4D5302CD737E30090649B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ross.GPS-SpoofTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GPS-Spoof.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GPS-Spoof";
+			};
+			name = Release;
+		};
+		4CD4D5322CD737E30090649B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ross.GPS-SpoofUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GPS-Spoof";
+			};
+			name = Debug;
+		};
+		4CD4D5332CD737E30090649B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ross.GPS-SpoofUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GPS-Spoof";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CD4D4FC2CD737DA0090649B /* Build configuration list for PBXProject "FitnessApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD4D5292CD737E30090649B /* Debug */,
+				4CD4D52A2CD737E30090649B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CD4D52B2CD737E30090649B /* Build configuration list for PBXNativeTarget "FitnessApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD4D52C2CD737E30090649B /* Debug */,
+				4CD4D52D2CD737E30090649B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CD4D52E2CD737E30090649B /* Build configuration list for PBXNativeTarget "GPS-SpoofTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD4D52F2CD737E30090649B /* Debug */,
+				4CD4D5302CD737E30090649B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CD4D5312CD737E30090649B /* Build configuration list for PBXNativeTarget "GPS-SpoofUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD4D5322CD737E30090649B /* Debug */,
+				4CD4D5332CD737E30090649B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4CD4D4F92CD737DA0090649B /* Project object */;
+}

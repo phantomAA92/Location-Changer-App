@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+				<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="example app, output as File"><wpt lat="40.660178363201" lon="-73.7036962865054">
+						<ele>0</ele>
+						<time>2025-05-18T12:25:31Z</time>
+					</wpt><wpt lat="40.660268640979" lon="-73.703696286505">
+						<ele>10</ele>
+						<time>2025-05-18T12:25:41Z</time>
+					</wpt><wpt lat="40.660268640979" lon="-73.703714342061">
+						<ele>2</ele>
+						<time>2025-05-18T12:25:51Z</time>
+					</wpt><wpt lat="40.660088085423" lon="-73.703714342061">
+						<ele>20</ele>
+						<time>2025-05-18T12:26:01Z</time>
+					</wpt><wpt lat="40.660133224312" lon="-73.703714342061">
+						<ele>5</ele>
+						<time>2025-05-18T12:26:11Z</time>
+					</wpt><wpt lat="40.660133224312" lon="-73.703669203172">
+						<ele>5</ele>
+						<time>2025-05-18T12:26:21Z</time>
+					</wpt><wpt lat="40.660313779868" lon="-73.703669203172">
+						<ele>20</ele>
+						<time>2025-05-18T12:26:31Z</time>
+					</wpt><wpt lat="40.660313779868" lon="-73.703687258728">
+						<ele>2</ele>
+						<time>2025-05-18T12:26:41Z</time>
+					</wpt><wpt lat="40.660295724312" lon="-73.703687258728">
+						<ele>2</ele>
+						<time>2025-05-18T12:26:51Z</time>
+					</wpt><wpt lat="40.660295734312" lon="-73.703687248728">
+						<ele>2</ele>
+						<time>2025-05-18T12:31:51Z</time>
+					</wpt><wpt lat="40.660295744312" lon="-73.703687238728">
+						<ele>2</ele>
+						<time>2025-05-18T12:36:51Z</time>
+					</wpt><wpt lat="40.660295754312" lon="-73.703687228728">
+						<ele>2</ele>
+						<time>2025-05-18T12:41:51Z</time>
+					</wpt><wpt lat="40.660295764312" lon="-73.703687218728">
+						<ele>2</ele>
+						<time>2025-05-18T12:46:51Z</time>
+					</wpt><wpt lat="40.660295774312" lon="-73.703687208728">
+						<ele>2</ele>
+						<time>2025-05-18T12:51:51Z</time>
+					</wpt><wpt lat="40.660295784312" lon="-73.703687198728">
+						<ele>2</ele>
+						<time>2025-05-18T12:56:51Z</time>
+					</wpt><wpt lat="40.660295794312" lon="-73.703687188728">
+						<ele>2</ele>
+						<time>2025-05-18T13:01:51Z</time>
+					</wpt><wpt lat="40.660295804312" lon="-73.703687178728">
+						<ele>2</ele>
+						<time>2025-05-18T13:06:51Z</time>
+					</wpt><wpt lat="40.660295814312" lon="-73.703687168728">
+						<ele>2</ele>
+						<time>2025-05-18T13:11:51Z</time>
+					</wpt><wpt lat="40.660295824312" lon="-73.703687158728">
+						<ele>2</ele>
+						<time>2025-05-18T13:16:51Z</time>
+					</wpt><wpt lat="40.660295834312" lon="-73.703687148728">
+						<ele>2</ele>
+						<time>2025-05-18T13:21:51Z</time>
+					</wpt><wpt lat="40.660295844312" lon="-73.703687138728">
+						<ele>2</ele>
+						<time>2025-05-18T13:26:51Z</time>
+					</wpt>	
+					<trk>
+						<trkseg>
+						</trkseg>
+					</trk>
+				</gpx>
+				

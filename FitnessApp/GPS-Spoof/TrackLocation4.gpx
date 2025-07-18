@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+				<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="example app, output as File"><wpt lat="34.086484547720225" lon="-118.25687886322856">
+						<ele>0</ele>
+						<time>2025-01-30T06:02:00Z</time>
+					</wpt><wpt lat="34.086511631054" lon="-118.25687886323">
+						<ele>3</ele>
+						<time>2025-01-30T06:02:00Z</time>
+					</wpt><wpt lat="34.086543549068" lon="-118.25684694521">
+						<ele>5</ele>
+						<time>2025-01-30T06:02:00Z</time>
+					</wpt><wpt lat="34.086543549068" lon="-118.25678375077">
+						<ele>7</ele>
+						<time>2025-01-30T06:02:00Z</time>
+					</wpt><wpt lat="34.086486096642" lon="-118.25672629834">
+						<ele>9</ele>
+						<time>2025-01-30T06:02:00Z</time>
+					</wpt><wpt lat="34.086386791086" lon="-118.25672629834">
+						<ele>11</ele>
+						<time>2025-01-30T06:02:00Z</time>
+					</wpt><wpt lat="34.086303804249" lon="-118.25680928518">
+						<ele>13</ele>
+						<time>2025-01-30T06:02:00Z</time>
+					</wpt>	
+					<trk>
+						<trkseg>
+						</trkseg>
+					</trk>
+				</gpx>
+				
