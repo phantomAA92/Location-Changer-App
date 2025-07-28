@@ -1,6 +1,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Network
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -14,11 +15,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     private var realCoordinate: CLLocationCoordinate2D?
     private var fakeCoordinate: CLLocationCoordinate2D?
 
+    private let monitor = NWPathMonitor()
+    private let monitorQueue = DispatchQueue(label: "NetworkMonitor")
+
+    private var noInternetAlert: UIAlertController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupUI()
-        startLocationUpdates()
+        startNetworkMonitor()
         loadFakeLocationData()
     }
 
@@ -44,10 +49,57 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         ])
     }
 
+    func startNetworkMonitor() {
+        monitor.pathUpdateHandler = { path in
+            DispatchQueue.main.async {
+                if path.status == .satisfied {
+                    self.dismissNoInternetAlertIfNeeded()
+                    self.startLocationUpdates()
+                } else {
+                    self.stopLocationUpdates()
+                    self.showNoInternetAlert()
+                }
+            }
+        }
+        monitor.start(queue: monitorQueue)
+    }
+
+    func showNoInternetAlert() {
+        guard noInternetAlert == nil else { return }
+
+        let alert = UIAlertController(
+            title: "No Internet Connection",
+            message: "Internet is required to track your location. GPS tracking has been disabled.",
+            preferredStyle: .alert
+        )
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        noInternetAlert = alert
+
+        if self.presentedViewController == nil {
+            self.present(alert, animated: true)
+        }
+    }
+
+    func dismissNoInternetAlertIfNeeded() {
+        if let alert = noInternetAlert {
+            alert.dismiss(animated: true) {
+                self.noInternetAlert = nil
+            }
+        }
+    }
+
     func startLocationUpdates() {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+    }
+
+    func stopLocationUpdates() {
+        locationManager.stopUpdatingLocation()
+        locationManager.delegate = nil
+        self.realCoordinate = nil
+        updateLabels()
     }
 
     func loadFakeLocationData() {
@@ -59,7 +111,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
         fakeLocationManager = FakeLocationManager(gpxData: gpxData)
 
-        // Simulate updates every 5 seconds
         timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
             self.updateFakeLocation()
         }
@@ -81,7 +132,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func updateLabels() {
         guard let fake = fakeCoordinate else { return }
 
-        let real = realCoordinate ?? fake // If real is missing, use fake to avoid crash
+        let real = realCoordinate ?? fake
 
         let fakeText = String(format: "Fake: %.8f, %.8f", fake.latitude, fake.longitude)
         let realText = String(format: "Real: %.8f, %.8f", real.latitude, real.longitude)
@@ -90,12 +141,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         realLabel.text = realText
 
         if abs(fake.latitude - real.latitude) < 0.00001 &&
-           abs(fake.longitude - real.longitude) < 0.00001 {
-            // 🔴 Match = problem
+            abs(fake.longitude - real.longitude) < 0.00001 {
             fakeLabel.textColor = .red
         } else {
-            // ✅ Fake differs = working
             fakeLabel.textColor = .green
         }
+    }
+
+    deinit {
+        monitor.cancel()
+        timer?.invalidate()
     }
 }
