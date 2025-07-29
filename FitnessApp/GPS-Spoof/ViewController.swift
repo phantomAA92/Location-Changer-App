@@ -19,27 +19,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     private let monitorQueue = DispatchQueue(label: "NetworkMonitor")
 
     private var noInternetAlert: UIAlertController?
+    private var isInternetAvailable = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         startNetworkMonitor()
-        loadFakeLocationData()
     }
 
     func setupUI() {
         view.backgroundColor = .black
 
-        fakeLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 18, weight: .bold)
-        fakeLabel.textAlignment = .center
-        fakeLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(fakeLabel)
+        [fakeLabel, realLabel].forEach {
+            $0.font = UIFont.monospacedDigitSystemFont(ofSize: 18, weight: .bold)
+            $0.textAlignment = .center
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview($0)
+        }
 
-        realLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 18, weight: .bold)
-        realLabel.textAlignment = .center
         realLabel.textColor = .white
-        realLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(realLabel)
 
         NSLayoutConstraint.activate([
             fakeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -47,14 +45,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             realLabel.topAnchor.constraint(equalTo: fakeLabel.bottomAnchor, constant: 12),
             realLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+
+        clearLabels()
     }
 
     func startNetworkMonitor() {
         monitor.pathUpdateHandler = { path in
             DispatchQueue.main.async {
-                if path.status == .satisfied {
-                    self.dismissNoInternetAlertIfNeeded()
-                    self.startLocationUpdates()
+                let wasConnected = self.isInternetAvailable
+
+                // ✅ Accept any satisfied path (including tethering under .other)
+                self.isInternetAvailable = (path.status == .satisfied)
+
+                if self.isInternetAvailable {
+                    if !wasConnected {
+                        self.dismissNoInternetAlertIfNeeded()
+                        self.loadFakeLocationData()
+                        self.startLocationUpdates()
+                    }
                 } else {
                     self.stopLocationUpdates()
                     self.showNoInternetAlert()
@@ -69,13 +77,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
         let alert = UIAlertController(
             title: "No Internet Connection",
-            message: "Internet is required to track your location. GPS tracking has been disabled.",
+            message: "Internet is required to track your location. Tracking has been disabled.",
             preferredStyle: .alert
         )
-
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         noInternetAlert = alert
-
         if self.presentedViewController == nil {
             self.present(alert, animated: true)
         }
@@ -90,62 +96,70 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     func startLocationUpdates() {
+        guard isInternetAvailable else { return }
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+
+        if timer == nil {
+            timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
+                self.updateFakeLocation()
+            }
+        }
     }
 
     func stopLocationUpdates() {
         locationManager.stopUpdatingLocation()
         locationManager.delegate = nil
-        self.realCoordinate = nil
-        updateLabels()
+        realCoordinate = nil
+        fakeCoordinate = nil
+
+        timer?.invalidate()
+        timer = nil
+        clearLabels()
+    }
+
+    func clearLabels() {
+        fakeLabel.text = ""
+        realLabel.text = ""
     }
 
     func loadFakeLocationData() {
+        guard fakeLocationManager == nil else { return }
         guard let path = Bundle.main.url(forResource: "TrackLocation", withExtension: "gpx"),
               let gpxData = try? Data(contentsOf: path) else {
-            print("❌ Missing GPX")
+            print("❌ Missing GPX file")
             return
         }
-
         fakeLocationManager = FakeLocationManager(gpxData: gpxData)
-
-        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
-            self.updateFakeLocation()
-        }
     }
 
     func updateFakeLocation() {
-        guard let fakeLoc = fakeLocationManager?.getNextFakeLocation() else { return }
-        self.fakeCoordinate = fakeLoc
+        guard isInternetAvailable,
+              let fakeLoc = fakeLocationManager?.getNextFakeLocation() else { return }
+
+        fakeCoordinate = fakeLoc
         updateLabels()
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let loc = locations.last {
-            self.realCoordinate = loc.coordinate
-            updateLabels()
-        }
+        guard isInternetAvailable,
+              let loc = locations.last else { return }
+
+        realCoordinate = loc.coordinate
+        updateLabels()
     }
 
     func updateLabels() {
-        guard let fake = fakeCoordinate else { return }
+        guard isInternetAvailable, let fake = fakeCoordinate else { return }
 
         let real = realCoordinate ?? fake
+        fakeLabel.text = String(format: "Fake: %.8f, %.8f", fake.latitude, fake.longitude)
+        realLabel.text = String(format: "Real: %.8f, %.8f", real.latitude, real.longitude)
 
-        let fakeText = String(format: "Fake: %.8f, %.8f", fake.latitude, fake.longitude)
-        let realText = String(format: "Real: %.8f, %.8f", real.latitude, real.longitude)
-
-        fakeLabel.text = fakeText
-        realLabel.text = realText
-
-        if abs(fake.latitude - real.latitude) < 0.00001 &&
-            abs(fake.longitude - real.longitude) < 0.00001 {
-            fakeLabel.textColor = .red
-        } else {
-            fakeLabel.textColor = .green
-        }
+        fakeLabel.textColor = (abs(fake.latitude - real.latitude) < 0.00001 &&
+                               abs(fake.longitude - real.longitude) < 0.00001)
+                                ? .red : .green
     }
 
     deinit {
